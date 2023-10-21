@@ -15,6 +15,10 @@
          <b>Delete already booked ride</b>
       </li>
       <p>Users who are no longer interested in travelling can <br/>
+         <li type=circle>
+         <b>Recaptcha</b>
+      </li>
+      <p>Protects application from spam and abuse using recaptcha<br/>
          delete their ride by just inputing their booking code</p>
       <li type="circle">
          <b>Forecast</b>

@@ -19,7 +19,6 @@
          <b>Recaptcha</b>
       </li>
       <p>Protects application from spam and abuse using recaptcha<br/>
-         delete their ride by just inputing their booking code</p>
       <li type="circle">
          <b>Forecast</b>
       </li>

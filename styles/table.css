@@ -22,7 +22,7 @@ main.main_activities h4{
 }
 :is(div.header){
    background: rgb(145, 145, 231);
-   width: 150rem;
+   width: 150rem !important;
    height: 2rem;
    text-align: center;
    align-items: center;
@@ -33,7 +33,7 @@ main.main_activities h4{
    border-bottom: 1.1px solid #8d8b8b;
 }
 :is(div.header-2){
-   width: 70rem !important;
+   width: 80rem !important;
 }
 div.header span{
    font-weight: 500;

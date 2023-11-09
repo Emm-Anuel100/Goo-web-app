@@ -7,13 +7,14 @@ if (isset($_POST["location"]) && (!empty($_POST["location"]))) {
    # code...
 $location = $_POST["location"];
 $destination = $_POST["destination"];
-$price = $_POST["price"];
+$departure = $_POST["departure"];
 $seatings = $_POST["seatings"];
+$price = $_POST["price"] * $seatings;
 $code = rand(1000000,9999999);
 
 
-$sql = "INSERT INTO ride_bookings (location, destination, booking_code, seatings) 
-VALUES ('$location', '$destination', '$code', '$seatings')";
+$sql = "INSERT INTO ride_bookings (location, destination, booking_code, seatings, departure) 
+VALUES ('$location', '$destination', '$code', '$seatings', '$departure')";
 
 if ($conn->query($sql)==="false") {
    # code...

@@ -52,6 +52,16 @@ input[type="text"]{
    color: #979797;
    font-family:Arial, Helvetica, sans-serif;
 }
+h4.departure{
+   font-size: 13px !important;
+   font-weight: 600 !important;
+}
+input[type="text"].depart{
+   width: 90% !important;
+   border: none;
+   font-size: 12.4px !important;
+   padding: 0 3.4rem;
+}
 button[type="search"]{
    position: relative;
    left: 230%;
@@ -129,7 +139,7 @@ div.rides-container2 .rides{
    border-radius: .5rem;
    border: 1px solid #eeeeee21;
    width: 18rem;
-   height: 18.5rem;
+   height: 22.5rem;
    overflow: visible;
 }
 h3.booked_rides{
@@ -154,7 +164,7 @@ div.rides-container2 .rides .sec-contain{
    top: 2.5rem;
 }
 div.rides-container2 .rides .rates i{ /* star icons */
-   font-size: 16px;
+   font-size: 17px;
    color: orange;
    position: relative;
    margin: 0 1px;
@@ -168,7 +178,7 @@ div.rides-container2 .rides h4{
    font-weight: bold;
 }
 div.rides-container2 .rides h5{
-   font-size: 13px;
+   font-size: 18px;
    margin: 20px 1rem 0 0; /* top, right, bottom, left */
    color: #a5afbd;
    text-transform: uppercase;

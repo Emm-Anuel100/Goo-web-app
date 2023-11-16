@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2023 at 02:48 PM
+-- Generation Time: Nov 14, 2023 at 05:42 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -48,7 +48,7 @@ CREATE TABLE `available_rides` (
 --
 
 INSERT INTO `available_rides` (`id`, `Garriki Enugu - Lugbe Abuja`, `Nike Enugu - Aba Abia`, `Arochukwu Imo - Sapelle Delta`, `Awka Anambra - Suleja Niger`, `Lekki Lagos - Osogbo Osun`, `Adamawa Yola - Kano Kano`, `Garriki Enugu - Owerri Imo`, `ninth-mile Enugu - Wuye Abuja`, `Mbyama Rivers - Ajah Lagos`, `Aloma Kogi - Jos Plateau`, `Lafia Nasarawa - Belema Rivers`, `Kaba Abuja - Suleja Niger`) VALUES
-(1, 9200, 12500, 8500, 12000, 12000, 7000, 98766, 11200, 13000, 12500, 76558, 11200);
+(1, 9200, 12500, 8500, 12000, 12000, 7000, 12000, 11200, 13000, 12500, 76558, 11200);
 
 -- --------------------------------------------------------
 
@@ -113,16 +113,17 @@ CREATE TABLE `ride_bookings` (
   `destination` varchar(255) NOT NULL,
   `booking_code` int(255) NOT NULL,
   `seatings` int(255) NOT NULL DEFAULT 1,
-  `departure` varchar(255) NOT NULL
+  `departure` varchar(255) NOT NULL,
+  `price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='rides that are booked by users';
 
 --
 -- Dumping data for table `ride_bookings`
 --
 
-INSERT INTO `ride_bookings` (`id`, `location`, `destination`, `booking_code`, `seatings`, `departure`) VALUES
-(108, 'Garriki Enugu', 'Lugbe Abuja', 8743563, 2, '25th. Oct. 2023 | 6.00 am'),
-(110, 'Garriki Enugu', 'Lugbe Abuja', 2400444, 2, '25th. Oct. 2023 | 6.00 am');
+INSERT INTO `ride_bookings` (`id`, `location`, `destination`, `booking_code`, `seatings`, `departure`, `price`) VALUES
+(113, 'Adamawa Yola', 'Kano Kano', 1883393, 2, '3rd. Dec. 2023 | 10.00 am', 14000),
+(115, 'Garriki Enugu', 'Lugbe Abuja', 9663300, 3, '25th. Oct. 2023 | 6.00 am', 27600);
 
 -- --------------------------------------------------------
 
@@ -225,7 +226,7 @@ ALTER TABLE `newsletter_subscribers`
 -- AUTO_INCREMENT for table `ride_bookings`
 --
 ALTER TABLE `ride_bookings`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT for table `usersdata`

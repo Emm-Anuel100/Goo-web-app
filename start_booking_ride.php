@@ -37,7 +37,7 @@ if (mysqli_num_rows($result) > 0){
 <body>
 
 <header>
-   <a href="./Home.php">🔙</a>
+   <a href="./Home.php" class="navigate-back">🔙</a>
   <div class="search-box">
    <div class="row">
      <form action="#" method="post">

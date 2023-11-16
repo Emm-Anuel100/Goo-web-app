@@ -13,8 +13,8 @@ $price = $_POST["price"] * $seatings;
 $code = rand(1000000,9999999);
 
 
-$sql = "INSERT INTO ride_bookings (location, destination, booking_code, seatings, departure) 
-VALUES ('$location', '$destination', '$code', '$seatings', '$departure')";
+$sql = "INSERT INTO ride_bookings (location, destination, booking_code, seatings, departure, price) 
+VALUES ('$location', '$destination', '$code', '$seatings', '$departure', '$price')";
 
 if ($conn->query($sql)==="false") {
    # code...

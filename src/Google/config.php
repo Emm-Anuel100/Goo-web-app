@@ -25,9 +25,9 @@ $apiConfig = array(
     'application_name' => 'Goo travel',
 
     // OAuth2 Settings, you can get these keys at https://code.google.com/apis/console
-    'oauth2_client_id' => '1032905930183-hm0d4b693kkavhahqg4ma1t1mumhvtlf.apps.googleusercontent.com',
-    'oauth2_client_secret' => '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',
-    'oauth2_redirect_uri' => 'http://localhost/Goo/authenticate.php',
+    'oauth2_client_id' => '',
+    'oauth2_client_secret' => '',
+    'oauth2_redirect_uri' => '',
 
     // The developer key, you get this at https://code.google.com/apis/console
     'developer_key' => '',

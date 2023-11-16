@@ -68,6 +68,7 @@ if (mysqli_num_rows($result) < 0) {
                <span>Booking code</span>
                <span>Seatings</span>
                <span>Departure</span>
+               <span>Price(N)</span>
                <span>Delete ride</span>
             </div>
 
@@ -83,6 +84,7 @@ if (mysqli_num_rows($result) < 0) {
                <span><?php echo $row["booking_code"]; ?></span>
                <span><?php echo $row["seatings"]; ?></span>
                <span><?php echo $row["departure"]; ?></span>
+               <span><?php echo $row["price"]; ?></span>
                <span><?php echo "<a href='booked_rides.php?id=".$row['id']."'>Delete ride</a>" ?></span>
             </div>
             <?php  $i++; }  ?>

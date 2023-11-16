@@ -19,7 +19,7 @@ header{
  .search-box{
    width: 39%;
    border: none;
-   margin: 18px 10%;
+   margin: 18px 5%;
    max-height: 26rem;
 }
 .row{
@@ -36,15 +36,18 @@ header{
 header a{
    font-size: 23px;
    position: absolute;
-   top: 20px;
+   top: 27px;
    color: #9e9c9c;
+}
+input[type="text"]#input-box{
+   /* border: 1px solid rgba(214, 210, 210, 0.377); */
+   background: rgb(70, 68, 68);
 }
 input[type="text"]{
    height: 45px;
    width: 250%;
-   border-radius: 4px;
+   border-radius: 7px;
    background: transparent;
-   border: 1px solid rgba(214, 210, 210, 0.377);
    padding: 0 5%;
    display: inline;
    font-size: 14px;
@@ -137,7 +140,7 @@ div.rides-container2 .rides{
    background: #161616;
    padding: 0 1%;
    border-radius: .5rem;
-   border: 1px solid #eeeeee21;
+   /* border: 1px solid #eeeeee21; */
    width: 18rem;
    height: 22.5rem;
    overflow: visible;
@@ -150,7 +153,8 @@ h3.booked_rides{
    color: #979494;
 }
 div.rides-container2 .rides:hover{
-   transform: scale(1.03);
+   /* transform: scale(1.03); */
+   transform: translateY(-8px);
    box-shadow: 1px 1px 1rem #5250507e;
 }
 div.rides-container2 .rides img{
@@ -231,7 +235,10 @@ div.rides-container2 .rides{
 }
 
 
-@media screen and (max-width: 450px) {  
+@media screen and (max-width: 450px) { 
+   a.navigate-back{
+      display: none;
+   } 
    button[type="search"]{
       left: 222%;
       bottom: 2.3rem;
@@ -240,7 +247,7 @@ div.rides-container2 .rides{
       width: 80%;
    }
    input[type="text"]{
-      width: 175%;
+      width: 170%;
    }
    button[type="search"]{
       left: 155%;
@@ -248,10 +255,28 @@ div.rides-container2 .rides{
    }
 
 
-@media screen and (max-width: 400px) {  
+ @media screen and (max-width: 400px) {  
+   input[type="text"]{
+      padding: 0 1rem;
+      font-size: 15px !important;
+   }
+   ::placeholder{
+      font-size: 15px !important;
+   }
+   ::-moz-placeholder{
+      font-size: 15px !important;
+   }
    .search-box{
       width: 55%;
    }
+   button[type="search"]{
+     margin-left: -10px;
+     margin-top: 3px;
+     background: rgb(70, 68, 68);
+     font-size: 17px;
+     padding: 0 5px;
+   }
+   
    input[type="search"]{
       left: 145%;
    }

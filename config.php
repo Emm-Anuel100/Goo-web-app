@@ -3,8 +3,8 @@
 require_once("./conn.php");
 
 ##### Google App Configuration #####
-$googleappid = "1032905930183-hm0d4b693kkavhahqg4ma1t1mumhvtlf.apps.googleusercontent.com"; 
-$googleappsecret = "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"; 
+$googleappid = "1################apps.googleusercontent.com"; 
+$googleappsecret = "GOCSPX-xH#####################sACi7QgO_M_mLp"; 
 $redirectURL = "http://localhost/Goo/authenticate.php"; 
 
 ##### Required Library #####

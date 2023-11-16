@@ -1,6 +1,6 @@
 <?php
 
-#requiring the connection file
+#include the connection file
 require_once("./conn.php");
 
 if (isset($_POST["location"]) && (!empty($_POST["location"]))) {

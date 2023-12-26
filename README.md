@@ -1,20 +1,20 @@
 
-<h1>Goo Ride Booking Application</h1>  
+<h1>Goo Ride Booking System</h1>  
    <br/>
    <h2>Features of this application</h2>
    <ul>
       <li type="circle">
-         <b>Login with Google(Goauth2)</b>
+         <b>Google Login (Goauth2)</b>
       </li>
-      <p>Users can login using their Google account</p>
+      <p>Login using Google account</p>
       <li type="circle">
          <b>Make Ride reservation with ease</b>
       </li>
       <p>Users can make reservation with number of seatings</p>
       <li type=circle>
-         <b>Delete already booked ride</b>
+         <b>Delete booked ride</b>
       </li>
-      <p>Users who are no longer interested in travelling can <br/>
+      <p>Users who are no longer interested in travelling can delete there rides<br/>
          <li type=circle>
          <b>Recaptcha</b>
       </li>
@@ -24,7 +24,7 @@
       </li>
       <p>Check current day forecast globally</p>
       <li type="circle">
-        <b>Cookie consent</b>
+        <b>Cookie</b>
       </li>
       <p>Store cookie on users machine for one month</p>
       <li type="circle">
@@ -34,7 +34,6 @@
       <li type="circle">
          <b>Strong one-way hashing algorithm</b>
       </li>
-      <p>hash password before inserting into database</p>
       <li type="circle">
          <b>Administration</b>
       </li>

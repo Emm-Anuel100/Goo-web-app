@@ -1,6 +1,4 @@
 
-
-
 // mobile navigation references
 const hamburger = document.querySelector('#onclick');
 let nav_items = document.querySelector('.navbar');

@@ -52,8 +52,3 @@ let available_words = new Array(
    results_box.innerHTML = ""; // hide all elements when clicked on one
  }
  
- 
- 
- 
- 
- 

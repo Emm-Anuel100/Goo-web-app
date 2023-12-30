@@ -11,20 +11,32 @@ if (mysqli_num_rows($result) > 0){
   # code...
   $row = mysqli_fetch_assoc($result);
   
-if ($code !== $row["booking_code"]) {
-   # code...
-   return false;
-}
-else{
+  ## if code posted is not found in the booking_code column
+  if ($code !== $row["booking_code"]) {
+   ## alert message below
    ?>
    <script>
-      alert("your ride has been deleted.");
+      alert("this ride was not found");
    </script>
    <?php
+  }
+  else{
+   ## if code is found then delete data from the column
    $delete = mysqli_query($conn,"DELETE FROM `ride_bookings` WHERE `booking_code` = '$code' LIMIT 1");
+   ## query db to check if data was deleted succesfully
+   if ($conn->query($delete) === "false") {
+      ## if not deleted
+      die("ERROR DELETING RIDE:");
+    } else {
+      ?>
+     <script>
+      alert("your ride has been deleted.");
+    </script>
+    <?php
+   }
 }
 }
-#if posted code is not found in any of the rows
+## if number of rows with the same value as the code posted is less than 0
 else{
    ?>
    <script>
@@ -50,8 +62,8 @@ else{
     <!-- Google Fonts Pre Connect -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./styles/sign-in.css">

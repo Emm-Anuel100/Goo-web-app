@@ -16,7 +16,7 @@ if (!$result) {
       alert("ERROR UPDATING PRICE");
    </script>
    <?php
-} else {
+ } else {
    # code...
    ?>
    <script>

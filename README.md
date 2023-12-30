@@ -1,45 +1,64 @@
 
-<h1>Goo Ride Booking Application</h1>  
+<h1>💢 Goo Ride Booking System</h1>  
    <br/>
-   <h2>Features of this application</h2>
+   <h2>🎋 Overview</h2>
+   <hr/>
+    <p>Goo is a ride booking system developed with the following technologies:<br/>
+      HTML5,CSS3,JAVASCRIPT,PHP AND MYSQL.
+     </p>
+   <br/><hr/>
+   <h2>🌳 Features</h2>
+   <hr/>
    <ul>
       <li type="circle">
-         <b>Login with Google(Goauth2)</b>
+         <b>🌱 Goauth2 integration</b>
       </li>
-      <p>Users can login using their Google account</p>
+      <p>Users can login with their prefered Google account</p>
       <li type="circle">
-         <b>Make Ride reservation with ease</b>
+         <b>🚎 Make Ride reservation with ease</b>
       </li>
-      <p>Users can make reservation with number of seatings</p>
+      <p>Users can make reservation with number of seatings they need</p>
       <li type=circle>
-         <b>Delete already booked ride</b>
+         <b>✖ Delete already booked ride</b>
       </li>
-      <p>Users who are no longer interested in travelling can <br/>
+      <p>Users who are no longer interested in travelling can<br/>
          delete their ride by just inputing their booking code</p>
+         <li type=circle>
+            <b>🌱 View ride history</b>
+         </li>
+         <p>Users can check their ride history with ease</p>
       <li type="circle">
-         <b>Forecast</b>
+         <b>❄ Forecast</b>
       </li>
       <p>Check current day forecast globally</p>
       <li type="circle">
-        <b>Cookie consent</b>
+         <b>💸 Payment gateway integration</b>
       </li>
-      <p>Store cookie on users machine for one month</p>
+      <p>Users can pay via tranfer,ussd ...</p>
       <li type="circle">
-         <b>Responsive design</b>
+        <b>🍪 Cookie consent</b>
+      </li>
+      <p>Stores cookie on users machine for one month</p>
+      <li type="circle">
+         <b>🛅 Password recovery</b>
+       </li>
+       <p>Users who have forgoten their password can request for a new one</p>
+      <li type="circle">
+         <b>💻 Responsive design</b>
       </li>
       <p>Fits to every screen size</p>
       <li type="circle">
-         <b>Strong one-way hashing algorithm</b>
+         <b>🔑 Strong one-way hashing algorithm</b>
       </li>
-      <p>hash password before inserting into database</p>
+      <p>uses a strong hashing algorithm to hash password before storing.</p>
       <li type="circle">
-         <b>Administration</b>
+         <b>👨 Administration panel</b>
       </li>
-      <p>Provision of an admin panel for actions such as:</p>
-      <li>Update price list</li>
-      <li>View number of registered users</li>
-      <li>Delete users ride(s) or account</li>
-      <li>View number and emails of newsletter subscribers</li>
+      <p>Admin can:</p>
+      <li>💵 Update price lists</li>
+      <li>👥 View number of registered users in the system</li>
+      <li>🚎 Delete users ride or account</li>
+      <li>📧 View emails of newsletter subscribers</li>
    </ul> 
-   <br/>
-   <h3>Check out project <a href="#" rel="noopener" rel="noreferrer" target="_blank">here</a></h3>
+   <br/><hr/>
+   <h3>🌐 Check out project <a href="#" rel="noopener" rel="noreferrer" target="_blank">here</a></h3>

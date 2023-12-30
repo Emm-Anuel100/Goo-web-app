@@ -84,19 +84,19 @@ if (mysqli_num_rows($result) < 0) {
                           
            ?>
             <div class="header rolls">
-               <span><?php echo ($i); ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["oauth_pro"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["oauthid"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["f_name"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["l_name"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["username"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["email_id"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["locale"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["picture"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["created_date"]; ?></span>
-               <span style="width: 120px; overflow-x: hidden;"><?php echo $row["password"]; ?></span>
-               <span style="width: 14px;"><?php echo $row["notify"]; ?></span>
-               <span style="width: 120px; position: relative; left: 1rem;"><?php echo "<a href='delete_account.php?id=".$row['id']."'>Delete account</a>" ?></span>
+               <span><?= ($i); ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["oauth_pro"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["oauthid"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["f_name"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["l_name"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["username"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["email_id"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["locale"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["picture"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["created_date"]; ?></span>
+               <span style="width: 120px; overflow-x: hidden;"><?= $row["password"]; ?></span>
+               <span style="width: 14px;"><?= $row["notify"]; ?></span>
+               <span style="width: 120px; position: relative; left: 1rem;"><?= "<a href='delete_account.php?id=".$row['id']."'>Delete account</a>" ?></span>
             </div>
             <?php  $i++; }  ?>
          </section>

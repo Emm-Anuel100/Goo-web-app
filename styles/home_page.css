@@ -128,7 +128,6 @@ header .navbar ul li ul{
    display: none;
 }
 
-
 header .navbar ul li ul li{
    width: 100%;
    border-top: var(--border-top1)
@@ -703,7 +702,7 @@ p.copy-right > span{
       font-size: 96.7% !important;
    }
       div.rides-container .rides{
-         width: 146% !important;
+         width: 136% !important;
       }
       footer.page-footer{
          padding: 0 14% 3rem 10% !important; /* top, right, bottom, left */

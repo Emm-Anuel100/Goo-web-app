@@ -24,8 +24,8 @@ if (mysqli_num_rows($result) > 0){
     <!-- Google Fonts Pre Connect -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css files  -->
     <link rel="stylesheet" href="./styles/home_page.css">
@@ -37,11 +37,11 @@ if (mysqli_num_rows($result) > 0){
 <body>
 
 <header>
-   <a href="./Home.php">🔙</a>
+   <a href="./Home.php" class="navigate-back">🔙</a>
   <div class="search-box">
    <div class="row">
      <form action="#" method="post">
-      <input type="text" name="" id="input-box" placeholder="Search your destination ..." required="" autocomplete="off">
+      <input type="text" name="" id="input-box" placeholder="Search Goo here ..." required="" autocomplete="off">
       <button type="search">🔍<span>search</span></button>
      </form>
    </div>
@@ -58,24 +58,21 @@ if (mysqli_num_rows($result) > 0){
       <h3 class="booked_rides">
          available rides
       </h3>
-      <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
+      <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/>
      <div class="sec-contain">
-      <div class="rates sec1">
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i><br/>
-      </div>
       <h4>Garriki Enugu -- Lugbe Abuja</h4>
-      <h5><span>N</span><?php echo $row["Garriki Enugu - Lugbe Abuja"]; ?></h5>
+      <h5><span>&#8358;</span><?= $row["Garriki Enugu - Lugbe Abuja"]; ?></h5>
 
       <form action="./booked_message.php" method="post">
         <section class="travel-infor">
           <input type="text" name="location" value="Garriki Enugu">
           <input type="text" name="destination" value="Lugbe Abuja">
-          <input type="number" name="price" value="<?php echo $row["Garriki Enugu - Lugbe Abuja"]; ?>">
-        </section> <br/><br/>
-        <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          <input type="number" name="price" value="<?= $row["Garriki Enugu - Lugbe Abuja"]; ?>">
+        </section> <br/>
+
+        <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="25th. Oct. 2023 | 6.00 am" class="depart" readonly=""><br/>
+        <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
         <button type="submit">Book ride</button>
       </form>
      </div>
@@ -84,22 +81,19 @@ if (mysqli_num_rows($result) > 0){
     <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Nike Enugu -- Aba Abia</h4>
-        <h5><span>N</span><?php echo $row["Nike Enugu - Aba Abia"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Nike Enugu - Aba Abia"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Nike Enugu">
             <input type="text" name="destination" value="Aba Abia">
-            <input type="number" name="price" value="<?php echo $row["Nike Enugu - Aba Abia"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+            <input type="number" name="price" value="<?= $row["Nike Enugu - Aba Abia"]; ?>">
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="5th. Nov. 2023 | 7.30 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -108,22 +102,19 @@ if (mysqli_num_rows($result) > 0){
     <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Arochukwu Imo -- Sapelle Delta</h4>
-        <h5><span>N</span><?php echo $row["Arochukwu Imo - Sapelle Delta"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Arochukwu Imo - Sapelle Delta"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Arochukwu Imo">
             <input type="text" name="destination" value="Sapelle Delta">
-            <input type="number" name="price" value="<?php echo $row["Arochukwu Imo - Sapelle Delta"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+            <input type="number" name="price" value="<?= $row["Arochukwu Imo - Sapelle Delta"]; ?>">
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+          <input type="text" name="departure" value="30th. Dec. 2023 | 5.00 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -132,22 +123,19 @@ if (mysqli_num_rows($result) > 0){
    <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Awka Anambra -- Suleja Niger</h4>
-        <h5><span>N</span><?php echo $row["Arochukwu Imo - Sapelle Delta"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Arochukwu Imo - Sapelle Delta"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Awka Anambra">
             <input type="text" name="destination" value="Suleja Niger">
-            <input type="number" name="price" value="<?php echo $row["Arochukwu Imo - Sapelle Delta"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+            <input type="number" name="price" value="<?= $row["Arochukwu Imo - Sapelle Delta"]; ?>">
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="1st. Oct. 2023 | 9.00 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -156,22 +144,19 @@ if (mysqli_num_rows($result) > 0){
    <div class="rides">
     <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
     <div class="sec-contain">
-      <div class="rates sec1">
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i><br/>
-      </div>
       <h4>Lekki Lagos -- Osogbo Osun</h4>
-      <h5><span>N</span><?php echo $row["Lekki Lagos - Osogbo Osun"]; ?></h5>
+      <h5><span>&#8358;</span><?= $row["Lekki Lagos - Osogbo Osun"]; ?></h5>
 
       <form action="./booked_message.php" method="post">
         <section class="travel-infor">
           <input type="text" name="location" value="Lekki Lagos">
           <input type="text" name="destination" value="Osogbo Osun">
-          <input type="number" name="price" value="<?php echo $row["Lekki Lagos - Osogbo Osun"]; ?>">
-        </section> <br/><br/>
-        <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          <input type="number" name="price" value="<?= $row["Lekki Lagos - Osogbo Osun"]; ?>">
+        </section> <br/>
+
+        <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="25th. Oct. 2023 | 8.00 am" class="depart" readonly=""><br/>
+        <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
         <button type="submit">Book ride</button>
       </form>
      </div>
@@ -180,22 +165,19 @@ if (mysqli_num_rows($result) > 0){
  <div class="rides">
    <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
    <div class="sec-contain">
-    <div class="rates sec1">
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i><br/>
-    </div>
     <h4>Adamawa Yola -- Kano Kano</h4>
-    <h5><span>N</span><?php echo $row["Adamawa Yola - Kano Kano"]; ?></h5>
+    <h5><span>&#8358;</span><?= $row["Adamawa Yola - Kano Kano"]; ?></h5>
 
     <form action="./booked_message.php" method="post">
       <section class="travel-infor">
         <input type="text" name="location" value="Adamawa Yola">
         <input type="text" name="destination" value="Kano Kano">
-        <input type="number" name="price" value="<?php echo $row["Adamawa Yola - Kano Kano"]; ?>">
-      </section> <br/><br/>
-      <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+        <input type="number" name="price" value="<?= $row["Adamawa Yola - Kano Kano"]; ?>">
+      </section> <br/>
+
+      <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="3rd. Dec. 2023 | 10.00 am" class="depart" readonly=""><br/>
+      <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
       <button type="submit">Book ride</button>
     </form>
    </div>
@@ -204,22 +186,19 @@ if (mysqli_num_rows($result) > 0){
   <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Garriki Enugu -- Owerri Imo</h4>
-        <h5><span>N</span><?php echo $row["Garriki Enugu - Owerri Imo"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Garriki Enugu - Owerri Imo"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Garriki Enugu">
             <input type="text" name="destination" value="Owerri Imo">
             <input type="number" name="price" value="<?php echo $row["Garriki Enugu - Owerri Imo"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+          <input type="text" name="departure" value="25th. Oct. 2023 | 6.00 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -228,22 +207,19 @@ if (mysqli_num_rows($result) > 0){
     <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>ninth-mile Enugu -- Wuye Abuja</h4>
-        <h5><span>N</span><?php echo $row["ninth-mile Enugu - Wuye Abuja"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["ninth-mile Enugu - Wuye Abuja"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="ninth-mile Enugu">
             <input type="text" name="destination" value="Wuye Abuja">
             <input type="number" name="price" value="<?php echo $row["ninth-mile Enugu - Wuye Abuja"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+          <input type="text" name="departure" value="25th. Oct. 2023 | 5.30 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -253,22 +229,19 @@ if (mysqli_num_rows($result) > 0){
     <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Mbyama Rivers -- Ajah Lagos</h4>
-        <h5><span>N</span><?php echo $row["Mbyama Rivers - Ajah Lagos"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Mbyama Rivers - Ajah Lagos"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Mbyama Rivers">
             <input type="text" name="destination" value="Ajah Lagos">
             <input type="number" name="price" value="<?php echo $row["Mbyama Rivers - Ajah Lagos"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="27th. Dec. 2023 | 7.30 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -277,22 +250,19 @@ if (mysqli_num_rows($result) > 0){
     <div class="rides">
       <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
       <div class="sec-contain">
-        <div class="rates sec1">
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i>
-           <i class="fas fa-star">0</i><br/>
-        </div>
         <h4>Aloma Kogi -- Jos Plateau</h4>
-        <h5><span>N</span><?php echo $row["Aloma Kogi - Jos Plateau"]; ?></h5>
+        <h5><span>&#8358;</span><?= $row["Aloma Kogi - Jos Plateau"]; ?></h5>
 
         <form action="./booked_message.php" method="post">
           <section class="travel-infor">
             <input type="text" name="location" value="Aloma Kogi">
             <input type="text" name="destination" value="Jos Plateau">
-            <input type="number" name="price" value="<?php echo $row["Aloma Kogi - Jos Plateau"]; ?>">
-          </section> <br/><br/>
-          <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+            <input type="number" name="price" value="<?= $row["Aloma Kogi - Jos Plateau"]; ?>">
+          </section> <br/>
+
+          <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="15th. Oct. 2023 | 8.00 am" class="depart" readonly=""><br/>
+          <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
           <button type="submit">Book ride</button>
         </form>
        </div>
@@ -301,22 +271,19 @@ if (mysqli_num_rows($result) > 0){
    <div class="rides">
     <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
     <div class="sec-contain">
-      <div class="rates sec1">
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i>
-         <i class="fas fa-star">0</i><br/>
-      </div>
       <h4>Lafia Nasarawa -- Belema Rivers</h4>
-      <h5><span>N</span><?php echo $row["Lafia Nasarawa - Belema Rivers"]; ?></h5>
+      <h5><span>&#8358;</span><?= $row["Lafia Nasarawa - Belema Rivers"]; ?></h5>
 
       <form action="./booked_message.php" method="post">
         <section class="travel-infor">
           <input type="text" name="location" value="Lafia Nasarawa">
           <input type="text" name="destination" value="Belema Rivers">
-          <input type="number" name="price" value="<?php echo $row["Lafia Nasarawa - Belema Rivers"]; ?>">
-        </section> <br/><br/>
-        <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+          <input type="number" name="price" value="<?= $row["Lafia Nasarawa - Belema Rivers"]; ?>">
+        </section> <br/>
+
+        <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="2nd. Oct. 2023 | 9.00 am" class="depart" readonly=""><br/>
+        <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
         <button type="submit">Book ride</button>
       </form>
      </div>
@@ -325,22 +292,19 @@ if (mysqli_num_rows($result) > 0){
  <div class="rides">
   <img src="./images/service-icon-01.png" alt="icon" loading="lazy"/><br/>
   <div class="sec-contain">
-    <div class="rates sec1">
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i>
-       <i class="fas fa-star">0</i><br/>
-    </div>
     <h4>Kaba Abuja -- Suleja Niger</h4>
-    <h5><span>N</span><?php echo $row["Kaba Abuja - Suleja Niger"]; ?></h5>
+    <h5><span>&#8358;</span><?= $row["Kaba Abuja - Suleja Niger"]; ?></h5>
 
     <form action="./booked_message.php" method="post">
       <section class="travel-infor">
         <input type="text" name="location" value="Kaba Abuja">
         <input type="text" name="destination" value="Suleja Niger">
-        <input type="number" name="price" value="<?php echo $row["Kaba Abuja - Suleja Niger"]; ?>">
-      </section> <br/><br/>
-      <input type="number" name="seatings" placeholder="Seatings" required=""><br/>
+        <input type="number" name="price" value="<?= $row["Kaba Abuja - Suleja Niger"]; ?>">
+      </section> <br/>
+
+      <h4 class="departure">Departure:</h4>
+        <input type="text" name="departure" value="24th. Dec. 2023 | 8.00 am" class="depart" readonly=""><br/>
+      <input type="number" name="seatings" placeholder="Seatings" required="" min="1"><br/>
       <button type="submit">Book ride</button>
     </form>
    </div>

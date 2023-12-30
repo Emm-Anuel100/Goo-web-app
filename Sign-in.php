@@ -1,4 +1,5 @@
 <?php
+  ## start new session
   session_start();
 
   ## connection file
@@ -9,9 +10,12 @@
   if(isset($_SESSION['userData'])){
     header('location: Home.php');
   }
+
   $loginURL="";
   $authUrl = $googleClient->createAuthUrl();
   $loginURL = filter_var($authUrl, FILTER_SANITIZE_URL);
+
+  @$_SESSION["email"] = $_POST["email"];
 
   ## Verifies if user is found in the system
   if (isset($_POST['email'])) {
@@ -61,8 +65,8 @@
     <!-- Google Fonts Pre Connect -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./styles/sign-in.css">
@@ -110,7 +114,7 @@
   
    <script src="./scripts/password.js"></script>
    <script src="./scripts/scroll.js"></script>
-   <script typ="text/javascript">
+   <script type="text/javascript">
       document.querySelector("#submit_btn").onclick = () =>{
       const response = grecaptcha.getResponse();
 

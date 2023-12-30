@@ -1,16 +1,19 @@
 <?php
+## start new session
+session_start();
 ## require connection file
 require_once 'conn.php';
 ## require Google config file
 require_once 'config.php';
 
+@$_SESSION["email"] = $_POST["email"];
+
 ## Sign up action
 if (isset($_POST["username"]) && !empty($_POST["email"])) {
    # code...
- ## (@) included to hide errors from this variable
- 
+ $password =  mysqli_real_escape_string($conn, $_POST["password"]);
  $password = password_hash($password, PASSWORD_DEFAULT); // hash password before saving to database
- 
+ $username = mysqli_real_escape_string($conn, $_POST["username"]);
  $email = mysqli_real_escape_string($conn, $_POST["email"]);
  
  $query = "SELECT * FROM usersdata WHERE email_id = '$email'";
@@ -23,19 +26,14 @@ if (isset($_POST["username"]) && !empty($_POST["email"])) {
      </script>
      <?php
      } else { 
-      $username = mysqli_real_escape_string($conn, $_POST["username"]);
-      $email = mysqli_real_escape_string($conn, $_POST["email"]);
-      $password =  mysqli_real_escape_string($conn, $_POST["password"]);
       $notify = mysqli_real_escape_string($conn, $_POST["notify"]);
 
       $sql = "INSERT INTO usersdata (username,email_id,password,notify)
       VALUES('$username','$email','$password','$notify')";  
-      if ($conn->query($sql)==="false") {
+      if ($conn->query($sql)=== true) {
          # code...
-         echo("ERROR CREATING ACCOUNT:" .$conn->connect_error);
-      }else{
          header("location: ./Home.php");
-      }   
+      }  
      }
    }
 ?>
@@ -65,8 +63,8 @@ $loginURL = filter_var($authUrl, FILTER_SANITIZE_URL);
     <!-- Google Fonts Pre Connect -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./styles/sign-in.css">
@@ -100,8 +98,8 @@ $loginURL = filter_var($authUrl, FILTER_SANITIZE_URL);
         <section>
          <span class="password">⚠ password should contain special characters e.g \,#, e.t.c</span><br/>
          <span class="password">⚠ password must contain a minimum of 8 characters</span><br/>
-         <span class="password">⚠ password must not contain space</span><br/>
-         <span class="password">⚠ password should contain uppercase and lowercase letters</span>
+         <!-- <span class="password">⚠ password must not contain space</span><br/>
+         <span class="password">⚠ password should contain uppercase and lowercase letters</span> -->
         </section>
          <fieldset>
             <input type="password" id="password2" required="" placeholder="Comfirm password...">
@@ -136,7 +134,7 @@ $loginURL = filter_var($authUrl, FILTER_SANITIZE_URL);
   
    <script src="./scripts/password.js"></script>
    <script src="./scripts/scroll.js"></script>
-   <script typ="text/javascript">
+   <script type="text/javascript">
       document.querySelector("#submit_btn").onclick = () =>{
       const response = grecaptcha.getResponse();
 

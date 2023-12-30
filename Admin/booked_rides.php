@@ -1,6 +1,8 @@
 <?php
 
-require_once("../conn.php");
+## require the connection file
+require_once(dirname(__FILE__) ."../conn.php");
+
 
 if (isset($_GET['id'])) { 
    $ID = $_GET['id'];
@@ -67,6 +69,9 @@ if (mysqli_num_rows($result) < 0) {
                <span>Destination</span>
                <span>Booking code</span>
                <span>Seatings</span>
+               <span>Departure</span>
+               <span>Price(&#8358;)</span>
+               <span>Email</span>
                <span>Delete ride</span>
             </div>
 
@@ -76,12 +81,15 @@ if (mysqli_num_rows($result) < 0) {
                           
            ?>
             <div class="header rolls header-2">
-               <span><?php echo ($i); ?></span>
-               <span><?php echo $row["location"]; ?></span>
-               <span><?php echo $row["destination"]; ?></span>
-               <span><?php echo $row["booking_code"]; ?></span>
-               <span><?php echo $row["seatings"]; ?></span>
-               <span><?php echo "<a href='booked_rides.php?id=".$row['id']."'>Delete ride</a>" ?></span>
+               <span><?= ($i); ?></span>
+               <span><?= $row["location"]; ?></span>
+               <span><?= $row["destination"]; ?></span>
+               <span><?= $row["booking_code"]; ?></span>
+               <span><?= $row["seatings"]; ?></span>
+               <span><?= $row["departure"]; ?></span>
+               <span><?= $row["price"]; ?></span>
+               <span><?= $row["email"]; ?></span>
+               <span><?= "<a href='booked_rides.php?id=".$row['id']."'>Delete ride</a>" ?></span>
             </div>
             <?php  $i++; }  ?>
          </section>

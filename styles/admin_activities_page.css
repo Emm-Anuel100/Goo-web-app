@@ -1,0 +1,58 @@
+*,*::before,*::after{
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   color: #f1eeee;
+}
+body{
+   height: 100%;
+   overflow-x: scroll !important;
+}
+main.main_activities{
+   position: relative;
+   margin-top: 12%;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding: 10px 5%;
+}
+section.activities{
+   padding: 0 13px;
+   height: 15.5rem;
+   overflow-y: scroll;
+}
+section.activities_content > h2 samp{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+section.activities_content > h2 > span{
+   font-size: 24px;
+}
+section.activities_content h3{
+   font-size: 12px;
+   font-weight: 300;
+   text-transform: uppercase;
+   margin-left: 40px;
+}
+.section.activities_content h4{
+   margin: 13px 0;
+}
+h4 a{
+   text-align: center;
+   justify-content: center;
+   margin-top: 12px;
+   font-size: 15px;
+   font-weight: 300;
+   background: purple;
+   display: flex;
+   padding: 15px 8%;
+   border-radius: 2px;
+}
+h4 a:hover{
+   background-color: white;
+   color: purple;
+}
+section.illustration img{
+   height: 80%;
+}

@@ -26,17 +26,6 @@ if ($conn->query($sql)==="false" .$conn->error) {
 
 ?>
 
-<?php 
- ## select all from api_keys table
- $result = mysqli_query($conn, "SELECT * FROM (api_keys)");
-
- if (mysqli_num_rows($result) > 0){
-  # fetch next row
-  $row = mysqli_fetch_array($result);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +77,7 @@ if ($conn->query($sql)==="false" .$conn->error) {
          </div>
          <div class="form-group">
          <!-- fetch API_KEY column from db -->
-         <input type="hidden" id="api_key" value="<?= $row["paystack_key"]; ?>" />
+         <input type="hidden" id="api_key" value="pk_test_4d75f5f5bd6c850d3f4c57fe7a55d9b7c84d566f" />
          </div>
          <div class="form-submit">
          <button type="submit" class="payment" onclick="payWithPaystack()">Proceed to payment 

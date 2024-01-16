@@ -1,7 +1,7 @@
 <?php
 
 ## require the connection file
-require_once(dirname(__FILE__) ."../conn.php");
+require_once("../conn.php");
 
 
 if (isset($_GET['id'])) { 

@@ -34,7 +34,7 @@
       <li type="circle">
          <b>💸 Payment gateway integration</b>
       </li>
-      <p>Users can pay via tranfer,ussd ...</p>
+      <p>Users can pay via transfer,ussd code...</p>
       <li type="circle">
         <b>🍪 Cookie consent</b>
       </li>
@@ -50,7 +50,7 @@
       <li type="circle">
          <b>🔑 Strong one-way hashing algorithm</b>
       </li>
-      <p>uses a strong hashing algorithm to hash password before storing.</p>
+     <p>uses a strong hashing algorithm for password hashing.</p>
       <li type="circle">
          <b>👨 Administration panel</b>
       </li>

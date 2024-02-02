@@ -50,7 +50,7 @@
       <li type="circle">
          <b>🔑 Strong one-way hashing algorithm</b>
       </li>
-      <p>uses a strong hashing algorithm to hash password before storing.</p>
+      <p>uses a strong hashing algorithm for password hashing.</p>
       <li type="circle">
          <b>👨 Administration panel</b>
       </li>

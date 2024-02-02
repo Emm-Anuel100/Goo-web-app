@@ -34,7 +34,7 @@
       <li type="circle">
          <b>💸 Payment gateway integration</b>
       </li>
-      <p>Users can pay via tranfer,ussd ...</p>
+      <p>Users can pay via transfer,ussd code ...</p>
       <li type="circle">
         <b>🍪 Cookie consent</b>
       </li>

@@ -22,12 +22,6 @@ HTML5, CSS3, JavaScript, PHP, and MySQL.
 - **Forecast**
     - Check current day forecast globally.
 
-- **Payment gateway integration**
-    - Users can pay via bank transfer, USSD code, etc.
-
-- **Cookie consent**
-    - Stores a cookie on users' machines for one month.
-
 - **Password recovery**
     - Users who have forgotten their password can request a new one.
 
@@ -50,4 +44,8 @@ To get the project, you can clone the repository from GitHub using the following
 
 ```shell
 git clone https://github.com/Emm-Anuel100/Goo-web-app.git
+```
+
+```shell
+cd Goo-web-app
 ```

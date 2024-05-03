@@ -22,9 +22,6 @@ HTML5, CSS3, JavaScript, PHP, and MySQL.
 - **Forecast**
     - Check current day forecast globally.
 
-- **Payment gateway integration**
-    - Users can pay via bank transfer, USSD code, etc.
-
 - **Cookie consent**
     - Stores a cookie on users' machines for one month.
 

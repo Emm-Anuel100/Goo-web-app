@@ -51,3 +51,7 @@ To get the project, you can clone the repository from GitHub using the following
 ```shell
 git clone https://github.com/Emm-Anuel100/Goo-web-app.git
 ```
+
+```shell
+cd Goo-web-app
+```

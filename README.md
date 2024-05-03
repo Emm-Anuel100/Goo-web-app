@@ -22,9 +22,6 @@ HTML5, CSS3, JavaScript, PHP, and MySQL.
 - **Forecast**
     - Check current day forecast globally.
 
-- **Cookie consent**
-    - Stores cookie on users' machines for one month.
-
 - **Password recovery**
     - Users who have forgotten their password can request a new one.
 

@@ -43,3 +43,12 @@ HTML5, CSS3, JavaScript, PHP, and MySQL.
         - View the number of registered users in the system.
         - Delete users' rides or accounts.
         - View emails of newsletter subscribers.
+
+## Shell
+
+To get the project, you can clone the repository from GitHub using the following shell command:
+
+```shell
+git clone https://github.com/Emm-Anuel100/Weather.Now-PWA.git
+
+```
